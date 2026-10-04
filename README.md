@@ -33,10 +33,18 @@ Quantité : 3
 
 1. Lire le code et prédire la sortie avant de l’exécuter.
 2. Ajouter une variable `total` qui multiplie le prix par la quantité, puis afficher ce total.
-3. Enregistrer et exécuter. Avec un prix de `12` et une quantité de `3`, le total attendu est `36`.
-4. Remplacer le prix par `7` et la quantité par `5`. Avant l’exécution, annoncer le total attendu : `35`.
+3. Avec un prix de `12` et une quantité de `3`, prédire le total, puis enregistrer et exécuter.
+4. Remplacer le prix par `7` et la quantité par `5`. Avant l’exécution, annoncer le total attendu.
 5. Expliquer à un binôme ce qui change et ce qui reste identique. Chaque personne modifie son propre script.
 6. Revenir au premier jeu de valeurs. Enregistrer sous `commande.py`, puis relancer.
+
+<details>
+<summary>Vérifier les totaux après l’essai</summary>
+
+- Prix `12`, quantité `3` : total `36`.
+- Prix `7`, quantité `5` : total `35`.
+
+</details>
 
 **Résultat attendu :** un fichier `commande.py` qui affiche prix, quantité et total, correct sur les deux jeux de valeurs. Montrer sa relance et expliquer une ligne modifiée.
 
@@ -48,9 +56,35 @@ Déposer le fichier sur le Drive indiqué par le formateur, puis transmettre le 
 
 ## Aide graduée et défi
 
-- Indice 1 : `*` représente une multiplication.
-- Indice 2 : `total = prix_unitaire * quantite` calcule le total.
-- Indice 3 : `print("Total :", total)` l’affiche.
-- Défi : ajouter des frais fixes de `4` ; vérifier un montant final de `40` puis de `39`.
+<details>
+<summary>Indice 1 — l’opérateur</summary>
+
+`*` représente une multiplication.
+
+</details>
+
+<details>
+<summary>Indice 2 — calculer le total</summary>
+
+`total = prix_unitaire * quantite` calcule le total.
+
+</details>
+
+<details>
+<summary>Indice 3 — afficher le total</summary>
+
+`print("Total :", total)` l’affiche.
+
+</details>
+
+**Défi :** ajouter des frais fixes de `4` ; prédire puis vérifier le montant final pour les deux jeux de valeurs.
+
+<details>
+<summary>Vérifier les montants du défi après l’essai</summary>
+
+- Prix `12`, quantité `3` : montant final `40`.
+- Prix `7`, quantité `5` : montant final `39`.
+
+</details>
 
 La correction `solution.py` est à ouvrir après l’essai personnel. Ressource : [nombres et variables dans le tutoriel Python](https://docs.python.org/fr/3/tutorial/introduction.html#using-python-as-a-calculator).
