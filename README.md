@@ -1,15 +1,19 @@
 # Premiers pas Python — petit calcul de commande
 
 **Objectif :** modifier, expliquer, enregistrer et relancer un script Python.
-**Prérequis :** aucun en programmation ; savoir ouvrir un lien et enregistrer un fichier.
-**Durée :** atelier de 75 minutes, après une démonstration guidée.
-**Données :** prix et quantités fictifs, en nombres entiers.
+**Prérequis :** aucun.
+**Durée :** ~45mn
+
 
 ## Ouvrir l’environnement
 
-Dépôt pédagogique privé : [nimser/devia-python-demarrage](https://github.com/nimser/devia-python-demarrage). Le formateur doit autoriser l’accès au compte apprenant avant mardi ; un compte GitHub seul ne donne pas accès au dépôt. Se connecter au compte créé lundi, ouvrir **Code → Codespaces → Create codespace on main** et utiliser une machine à **2 cœurs**. Attendre l’ouverture de VS Code dans le navigateur. Aucune commande Git n’est demandée.
+Dépôt pédagogique privé : [nimser/devia-python-demarrage](https://github.com/nimser/devia-python-demarrage). Se connecter au compte créé lundi, ouvrir **Code → Codespaces → Create codespace on main**. Attendre l’ouverture de VS Code dans le navigateur. 
 
-Ouvrir `depart.py`, puis **Terminal → New Terminal**. Dans le dossier contenant le fichier :
+Ouvrir `depart.py`.
+
+Note: Si vous fermez le terminal par erreur, vous pouvez le retrouver via **Terminal → New Terminal** dans le menu en haut à gauche.
+
+Dans le dossier contenant le fichier :
 
 ```sh
 python3 --version
@@ -23,7 +27,7 @@ Prix unitaire : 12
 Quantité : 3
 ```
 
-**Si l’accès bloque :** ouvrir [Basthon Console](https://console.basthon.fr/), copier `depart.py` dans l’éditeur puis cliquer sur **Exécuter**. Aucun compte ni installation. Basthon permet de faire le calcul, pas les manipulations de terminal ou de `venv`.
+**Si l’accès bloque :** ouvrir [Basthon Console](https://console.basthon.fr/), copier `depart.py` dans l’éditeur puis cliquer sur **Exécuter**.
 
 ## Consignes
 
