@@ -1,61 +1,112 @@
-# Kit Python — préparation et contrôles formateur
+# Premiers pas Python — guide formateur
 
-## Préparer Codespaces
+## Préparer la séance
 
-Dépôt dédié privé : [nimser/devia-python-demarrage](https://github.com/nimser/devia-python-demarrage), créé à la demande de NW. NW prévoit son transfert vers WCS ou Simplon après confirmation avec Julien ; ne pas modifier l’organisation ou la visibilité automatiquement. Le dépôt ne contient pas les documents internes DevIA.
+- Vérifier les accès apprenants au dépôt, puis tester Codespaces à 2 cœurs : lancement, téléchargement, arrêt et reprise.
+- Préparer les liens Discord, le dossier Drive de remise et une copie de `depart.py` pour [Basthon](https://console.basthon.fr/).
+- Relever les OS et droits d’installation lundi ; tester les parcours Python / VS Code / extension Python / Venv sur ces systèmes.
+- Prévoir des salles visio pour les trois parcours de consolidation et afficher leurs consignes avant de rejoindre le groupe accompagné.
 
-1. Maintenir le **contenu** du kit à la racine du dépôt dédié, dont `.devcontainer/devcontainer.json` et `.gitignore`. Le kit du dépôt DevIA en est la source de préparation.
-2. Vérifier les droits d’accès des apprenants ; un compte GitHub seul ne donne pas accès à un dépôt privé. Ne pas publier le dépôt DevIA ni ses documents internes.
-3. Tester avec un compte disposant seulement des droits apprenant : machine 2 cœurs, démarrage, ouverture du fichier, terminal, exécution, téléchargement, arrêt puis reprise.
-4. Transmettre le lien par Discord. Faire vérifier la connexion au compte créé lundi ; ne jamais recueillir mots de passe ou codes d’authentification.
+## Matin — démo, pratique, vérification
 
-Configuration : image Microsoft Python 3.13 sur Debian Bookworm, utilisateur non-root `vscode`, extensions Python/Pylance. Aucun serveur, port exposé ou dépendance externe pour l’atelier. L’activation automatique de l’environnement est désactivée pour que l’interpréteur utilisé soit explicite.
+| Horaire | Animation | Contrôle |
+| --- | --- | --- |
+| 9 h 30–10 h 15 | Variables : 10 min de démo, 25 min sur la section 1, 10 min de comparaison. | Nouvelle quantité : prédiction, exécution, explication. |
+| 10 h 15–11 h | Conditions : 10 min de démo, 25 min sur la section 2, 10 min de vérification. | Sous le seuil, au seuil et au-dessus ; branche expliquée. |
+| 11 h–11 h 15 | Pause. | Reprise à 11 h 15. |
+| 11 h 15–12 h | Boucles : trois démos de 3 min, chacune suivie de 7 min de pratique, puis 15 min pour intégrer la livraison. | Nombre de tours, borne finale et indentation expliqués. |
+| 12 h–12 h 30 | 15 min d’explication en binômes, 10 min de modification individuelle, 5 min de retour. | Variable, condition et tour de boucle expliqués. |
 
-## Quota et sauvegarde
+Avant chaque exécution, demander une prédiction dans le chat. Faire écrire et modifier leur propre fichier ; afficher les corrections après l’essai. Si les variables restent fragiles, consacrer la suite du matin à leur consolidation et reprendre les boucles en semaine 2.
 
-[GitHub Free personnel](https://docs.github.com/en/billing/concepts/product-billing/github-codespaces) : 120 heures-cœur/mois, soit 60 heures sur 2 cœurs, et 15 Go-mois de stockage. Vérifier le quota disponible, ne pas demander de carte bancaire. Les organisations n’ont pas ce quota gratuit. Un arrêt réduit le calcul consommé, mais le stockage reste compté tant que le Codespace existe.
+### Variables — `demos/variables.py`
 
-Faire télécharger le `.py` avant l’arrêt ; ce téléchargement est la preuve de sauvegarde hors Codespaces. Ne supprimer un Codespace qu’après sauvegarde vérifiée par son propriétaire. Ne pas compter sur le quota gratuit pour toute la formation.
+Utiliser les places disponibles dans une salle. Demander la sortie, puis changer `places_occupees` de `18` à `23`. Faire distinguer le nom, la valeur et le calcul. Le changement prend effet à la prochaine exécution du script.
 
-## Démonstration guidée après-midi
+### Conditions — `demos/conditions.py`
 
-Le premier script n’exige ni environnement virtuel ni paquet tiers. Utiliser Codespaces pour une démonstration Linux commune ; accompagner les installations locales uniquement avec une notice testée pour l’OS constaté lundi.
+Utiliser la température : `22`, `25`, puis `28`. Faire verbaliser la comparaison et la branche exécutée. Montrer `:` et l’indentation. Revenir sur le cas exactement au seuil avant la pratique sur la livraison.
+
+### Boucles — `demos/boucles.py`
+
+Montrer un bloc à la fois : répétition de « Bonjour », numéro du passage, puis places restantes. Avant chaque bloc, faire prédire le nombre de lignes et les valeurs successives. Faire varier une borne avant de passer au bloc suivant.
+
+### Corrections de l’atelier
+
+- Section 1 : `total = prix_unitaire * quantite`, puis `print("Total :", total)` ; totaux `36` et `35`.
+- Section 2 : `solution.py` ; cas articles/livraison/montant : `48/4/52`, `50/0/50`, `56/0/56`.
+- Section 3 : `solution_boucle.py` ; montants `16`, `28`, `40`, `52`, `60`. De 1 à 8, quatre quantités ont la livraison offerte.
+- Défi compteur : initialiser à `0` avant la boucle, ajouter `1` dans la branche livraison offerte, afficher après la boucle.
+
+## Après-midi — réinvestir et comprendre l’environnement
+
+**13 h 30–14 h 15 :** demander une autre règle de livraison ; chacun la teste et explique un cas limite. Relever les difficultés avant la consolidation.
+
+**14 h 15–15 h 15 :** retrouver `commande.py`, le télécharger, le rouvrir et le relancer. Montrer éditeur, terminal et interpréteur, puis créer un environnement virtuel dans Codespaces. Préparer le dossier et les téléchargements de l’installation locale.
+
+Depuis le dossier du projet dans Linux / Codespaces :
 
 ```sh
 python3 --version
 python3 -m venv .venv
 .venv/bin/python --version
-.venv/bin/python depart.py
+.venv/bin/python commande.py
 .venv/bin/python -m pip --version
 ```
 
-Ces chemins concernent Linux/Codespaces, pas Windows. Sous Windows, utiliser `py -3` pour créer l’environnement, puis `.venv\Scripts\python.exe` pour le lancer, après vérification sur un poste Windows. Ne pas imposer l’activation du shell ; appeler directement l’interpréteur évite de mêler plusieurs syntaxes.
+`python -m pip` utilise pip associé à cet interpréteur. Le dossier `.venv` contient l’interpréteur du projet et ses dépendances ; le code de l’atelier utilise la bibliothèque standard. Les chemins ci-dessus correspondent à Linux.
 
-Montrer `python -m pip` : il associe pip à cet interpréteur. Ne pas installer de paquet pour le seul principe d’utiliser pip. Expliquer : éditeur = texte ; interpréteur = exécution ; terminal = commandes ; environnement virtuel = dépendances isolées du projet.
+## 15 h 15–16 h 15 — trois parcours parallèles
 
-## Points délicats pour NW
+15 h 15–15 h 30 : démarrer le parcours choisi. **Pause de 15 h 30 à 15 h 45.** 15 h 45–16 h 05 : poursuivre. 16 h 05–16 h 15 : partager une explication, une friction ou un résultat. Chacun peut changer de parcours après la pause.
 
-- Python n’a pas `let`/`const`, ni accolades ou point-virgule à ajouter aux exemples.
-- `=` affecte une valeur ; le code s’exécute dans l’ordre. Modifier une valeur impose de relancer le script.
-- Les noms sont sensibles à la casse ; `Quantite` et `quantite` diffèrent.
-- `print` accepte plusieurs arguments séparés par des virgules ; il ajoute espaces et retour à la ligne.
-- Lire la dernière ligne d’une trace d’erreur, puis repérer le fichier et la ligne. Provoquer `print(totla)` pour une `NameError`, puis corriger.
-- Ne pas introduire conditions, boucles ou fonctions avant d’avoir vérifié modification et compréhension des exemples simples.
+### Avec NW — les variables, pas à pas
 
-## Repli et contrôle
+Utiliser `demos/memoire.py`, ligne par ligne. Dessiner des étiquettes reliées aux valeurs :
 
-Après cinq minutes de blocage d’accès, passer sur [Basthon Console](https://console.basthon.fr/) et continuer le même calcul. Prévoir la copie de `depart.py` dans le message Discord si le dépôt n’est pas accessible. Faire télécharger le code : le stockage du navigateur n’est pas une remise.
+1. `nombre = 10` : le nom `nombre` est associé à un objet entier de valeur `10` en mémoire.
+2. `copie = nombre` : le nom `copie` désigne le même objet entier à ce moment.
+3. `nombre = nombre + 5` : lire la valeur associée à `nombre`, calculer `15`, puis associer `nombre` au résultat. `copie` reste associé à `10`.
+4. `print(nombre)` : lire la valeur et l’afficher. Demander les deux sorties avant d’exécuter.
 
-Accompagnement : un binôme verbalise pendant que chacun manipule ; NW dépanne un sous-groupe à la fois. Si les variables restent fragiles, réduire à un calcul et deux `print`. Si le groupe avance, ajouter les frais fixes, puis une faute de nom à diagnostiquer.
+L’image de l’étiquette est un modèle pour les noms Python. Les nombres entiers sont immuables ; le comportement de cet exemple sera à distinguer de celui des listes mutables. Les données de l’exécution sont en mémoire vive ; enregistrer le `.py` conserve les instructions sur un stockage durable. Relancer exécute ces instructions depuis le début.
 
-Contrôle individuel : prédire `36`, puis `35`, obtenir les deux sorties, expliquer la multiplication, relancer le fichier sauvegardé. Défi : `40`, puis `39`. La solution utilise seulement des entiers ; ne pas ouvrir la question des arrondis monétaires à ce stade.
+Faire tracer un nouvel exemple à la main avant de le lancer. Contrôle : expliquer pourquoi `copie` affiche encore `10`, et ce que conserve le fichier enregistré.
 
-## Vérifications techniques
+### Autonomie — une friction personnelle
+
+Choisir une difficulté : indentation, bornes de `range`, comparaison, fichier introuvable ou erreur de nom. Écrire le plus petit exemple qui reproduit le problème, prédire le résultat, consulter la documentation et essayer une modification. À la sortie : montrer l’exemple et ce qui a permis d’avancer, ou la question encore ouverte.
+
+### Autonomie — défis
+
+- Compter les quantités de 1 à 8 bénéficiant de la livraison offerte ; expliquer où le compteur est initialisé et modifié.
+- Ajouter un budget de `80` et afficher quelles quantités restent accessibles ; tester le cas exactement au budget.
+
+À la sortie : montrer les cas testés et expliquer une ligne. NW accompagne le pas à pas ; les autres parcours utilisent les consignes écrites et une comparaison en binômes.
+
+## 16 h 15–17 h — installer et vérifier sur son poste
+
+- **16 h 15–16 h 30 :** installer Python et VS Code avec la notice de l’OS ; ouvrir le dossier local contenant `commande.py` et installer l’extension Python de Microsoft.
+- **16 h 30–16 h 45 :** **Python: Create Environment → Venv**, choisir Python, puis **Python: Select Interpreter** et lancer le fichier.
+- **16 h 45–16 h 50 :** modifier une valeur, enregistrer et relancer ; montrer le résultat avec l’interpréteur du projet.
+- **16 h 50–17 h :** déposer le `.py` sur Drive, transmettre le lien par Discord en MP, météo finale et arrêt du Codespace.
+
+Objectif : Python, VS Code et un environnement virtuel utilisables localement. Un poste bloqué continue dans Codespaces ; relever l’étape et le message nécessaires à la reprise. Les téléchargements et droits se préparent avant 16 h 15.
+
+Ressources : [Python](https://www.python.org/downloads/), [VS Code](https://code.visualstudio.com/download), [parcours officiel Python / VS Code](https://code.visualstudio.com/docs/python/python-tutorial), [venv](https://docs.python.org/fr/3.13/library/venv.html).
+
+## Points Python à surveiller
+
+- `=` associe un nom à une valeur ; `==` compare deux valeurs.
+- `print` affiche les arguments séparés par des espaces, puis un retour à la ligne.
+- Un bloc commence après `:` et se reconnaît à son indentation ; `else` s’aligne sur `if`.
+- La borne finale de `range` est exclue ; les calculs dans la boucle sont refaits à chaque tour.
+- Lire la dernière ligne d’une erreur, repérer le fichier et la ligne, corriger puis relancer.
+
+## Contrôles techniques
 
 ```sh
 python3 -m unittest discover -s tests -v
 ```
 
-Vérification du 3 octobre 2026 : six tests réussis sur Python 3.13.12, dont les deux jeux de valeurs, la faute de nom, `venv`, pip et la présence du devcontainer. Dans Basthon Console (Python 3.12.1), les résultats 36 et 35 et l’export du script ont été vérifiés dans le navigateur. Le manifeste de l’image Microsoft Python 3.13 Bookworm répond HTTP 200.
-
-Ces contrôles ne prouvent pas le démarrage réel dans Codespaces. Le parcours Codespaces doit être validé avant diffusion ; aucune installation Windows n’est déclarée testée.
+Les tests couvrent les démos, les cas de livraison, les bornes de boucle, le compteur et l’exécution dans un environnement virtuel. La vérification locale Linux ne valide pas une installation Windows/macOS ni le parcours complet Codespaces avec les droits apprenant. Ces parcours font partie de la préparation technique avant diffusion.
