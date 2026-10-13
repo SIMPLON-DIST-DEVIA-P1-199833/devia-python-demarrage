@@ -2,7 +2,6 @@
 
 **Objectif :** construire un programme avec des variables, une condition et une boucle.
 **Prérequis :** aucun.
-**Durée :** matinée de 9 h 30 à 12 h 30, avec démos, exercices et pause.
 
 ## Ouvrir l’environnement
 
@@ -18,7 +17,7 @@ python3 depart.py
 
 Pour chaque section : suivre la courte démo, faire l’exercice sur son propre fichier, puis vérifier et expliquer le résultat.
 
-## 1. Variables et affichage — 9 h 30
+## 1. Variables et affichage
 
 1. Lire `depart.py` et prédire sa sortie avant de l’exécuter.
 2. Ajouter une variable `total` calculée à partir du prix unitaire et de la quantité.
@@ -45,7 +44,7 @@ Quel calcul ferais-tu sur une calculatrice ? En Python, `*` multiplie deux valeu
 
 </details>
 
-## 2. Conditions — 10 h 15
+## 2. Conditions
 
 La livraison coûte `4`. Elle est offerte quand le total des articles atteint `50`.
 
@@ -76,7 +75,7 @@ La livraison coûte `4`. Elle est offerte quand le total des articles atteint `5
 
 </details>
 
-## 3. Boucles — 11 h 15
+## 3. Boucles
 
 Après les petites démos, reprendre la même règle de livraison.
 
@@ -104,18 +103,18 @@ Pour les quantités de `1` à `8`, quatre bénéficient de la livraison offerte.
 
 </details>
 
-## Expliquer et modifier — 12 h
+## Expliquer et modifier
 
 Présenter le programme à un binôme : rôle d’une variable, choix d’une branche et déroulement d’un tour de boucle. Chacun propose une nouvelle règle à l’autre, qui la teste sur son propre fichier.
 
 **Livrable :** `commande.py`, avec des calculs vérifiés et une modification expliquée.
 Les corrections `solution.py` et `solution_boucle.py` servent à comparer après l’essai personnel.
 
-## Reprendre et explorer — après-midi
+## Reprendre et explorer
 
-À **13 h 30**, reprendre le programme, modifier une règle, puis retrouver et relancer le fichier. À **14 h 15**, découvrir l’interpréteur du projet et son environnement virtuel.
+Reprendre le programme, modifier une règle, puis retrouver et relancer le fichier. Découvrir l’interpréteur du projet et son environnement virtuel.
 
-De **15 h 15 à 16 h 15**, choisir un parcours, avec une pause de **15 h 30 à 15 h 45** :
+Choisir un parcours :
 
 - **Pas à pas avec le formateur :** comprendre une variable, suivre sa valeur pendant l’exécution et distinguer mémoire et fichier enregistré.
 - **Exploration personnelle :** choisir un blocage, écrire un petit exemple, chercher dans la documentation et noter ce qui a aidé.
@@ -123,7 +122,7 @@ De **15 h 15 à 16 h 15**, choisir un parcours, avec une pause de **15 h 30 à 1
 
 **Point de sortie :** expliquer une chose comprise, montrer un blocage reproduit ou présenter un défi testé.
 
-## Installer l’environnement local — 16 h 15
+## Installer l’environnement local
 
 1. Télécharger `commande.py` : clic droit → **Download** dans Codespaces, ou icône de téléchargement dans Basthon.
 2. Installer Python et VS Code avec le parcours indiqué pour son système.
