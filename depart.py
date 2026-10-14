@@ -164,10 +164,42 @@ print("is 'string' empty ?", bool(string))
 print("is 'empty_string' empty ?", bool(empty_string))
 
 # Exercice 5
-print("\nEXERCICE 5")
+'''print("\nEXERCICE 5")
 
 password = input('what is your password - hint, it is admin\n')
 if password == "admin":
     print('insane, you can read')
 else:
-    print('unlucky reading comprehension')
+    print('unlucky reading comprehension')*/
+'''
+
+# 14.10 Ex 1
+'''print("\nWe are going to compare 2 numbers to find the biggest one")
+num_1 = input('type the first number\n')
+num_2 = input('type the second number\n')
+
+if num_1 == num_2:
+    print("they are equal")
+elif num_1 > num_2:
+    print("num 1 bigger")
+else:
+    print("num 2 bigger")
+'''
+
+# 14.10 Ex 2
+num = 15
+if num % 3 == 0:
+    print("Divisible by 3")
+if num % 5 == 0:
+    print("Divisible by 5")
+
+def find_divisibles(myList, num):
+    # list comprehension to check if the number is divisible
+    return [i for i in myList if i % num == 0]
+
+# Check all divisible
+Divisible_list = [3, 5]
+num = 21
+Div_result = [i for i in Divisible_list if num % i == 0]
+print(Div_result)
+
