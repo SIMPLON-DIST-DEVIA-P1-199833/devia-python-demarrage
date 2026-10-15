@@ -57,3 +57,26 @@ print(*range(0, 101, 10))
 print("\nEXO 7.1")
 nums = [i for i in range(0, 101, 10)]
 print(nums)
+
+# EXO 8 - Créer une boucle qui calcule la somme des nombres de 1 à 50.
+print("\nEXO 8.0")
+sum = 0
+for i in range(1, 51):
+    sum += i
+print(sum)
+
+# EXO 9 - Demander à l'utilisateur un nombre et continuer à demander tant que ce nombre est négatif.
+print("\nEXO 9.0")
+keep_looping = 0
+while keep_looping == 0:
+    try:
+        num = int(input("Give me any negative number (int):\n"))
+        if num >= 0:
+            print("Not negative")
+            keep_looping = 1
+    except:
+        keep_looping = 1
+        print("ValueError - Not a valid int")
+
+# EXO 10 -
+print("\nEXO 10.0")
