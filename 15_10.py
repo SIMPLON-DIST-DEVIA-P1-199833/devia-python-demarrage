@@ -39,6 +39,7 @@ for i in range(len(liste)):
     print(liste[i])
 
 # EXO 6 - Demander à l'utilisateur un nombre de 1 à 10 et afficher la table de multiplication.
+'''
 print("\nEXO 6")
 try:
     mult = int(input("Choose a number between 1 and 10 so I can give you its multiplication table\n"))
@@ -49,6 +50,7 @@ try:
         print("I said between 1 and 10 you dimwit")
 except:
     print("lmao nice try")
+'''
 
 # EXO 7 - Utiliser `range()` pour afficher les nombres de 0 à 100 avec un pas de 10 - DEUX Syntaxes
 print("\nEXO 7.0")
@@ -66,6 +68,7 @@ for i in range(1, 51):
 print(sum)
 
 # EXO 9 - Demander à l'utilisateur un nombre et continuer à demander tant que ce nombre est négatif.
+'''
 print("\nEXO 9.0")
 keep_looping = 0
 while keep_looping == 0:
@@ -77,6 +80,22 @@ while keep_looping == 0:
     except:
         keep_looping = 1
         print("ValueError - Not a valid int")
-
-# EXO 10 -
+'''
+        
+# EXO 10 - Date et Heure 
 print("\nEXO 10.0")
+import datetime as dt
+maintenant = dt.datetime.now().strftime("It is now %I:%M %p on %B %d, %Y")
+print(maintenant)
+
+# EXO 11 - 
+print("\nEXO 11.0")
+import datetime as dt
+from babel.dates import format_datetime, format_date, format_time, UTC, get_timezone
+
+date_time = dt.datetime.now()
+french = get_timezone('Europe/Paris')
+date = format_date(date_time, format="EEEE dd MMMM yyyy", locale='fr_FR')
+time = format_time(date_time, format="H:mm:ss", tzinfo=french, locale='fr_FR')
+print(f"On est {date} et il est {time}")
+
