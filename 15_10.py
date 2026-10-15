@@ -91,7 +91,7 @@ print(maintenant)
 # EXO 11 - 
 print("\nEXO 11.0")
 import datetime as dt
-from babel.dates import format_datetime, format_date, format_time, UTC, get_timezone
+from babel.dates import format_date, format_time, get_timezone
 
 date_time = dt.datetime.now()
 french = get_timezone('Europe/Paris')
